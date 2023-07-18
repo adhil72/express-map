@@ -2,8 +2,12 @@
   "name": "express-map",
   "version": "1.0.0",
   "description": "Develop your backend faster",
-  "main": "index.js",
   "scripts": {
+    "build": "tsc && echo \"express map builded\"",
+    "test": "tsc && sudo npm link"
+  },
+  "bin": {
+    "create-express-map": "./dist/App.js"
   },
   "repository": {
     "type": "git",
@@ -14,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/adhil72/express-map/issues"
   },
-  "homepage": "https://github.com/adhil72/express-map#readme"
+  "homepage": "https://github.com/adhil72/express-map#readme",
+  "devDependencies": {
+    "@types/node": "^20.4.2"
+  },
+  "dependencies": {
+    "@types/yargs": "^17.0.24",
+    "fs": "^0.0.1-security"
+  }
 }

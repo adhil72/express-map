@@ -1,5 +1,6 @@
 # express-map
 Develop your backend faster 
-## How to use
+## How to get started
     npx create-express-map sample_project
-find your docs at wwww.www
+## Why express mapper
+Express mapper helps you to make your routing more easier

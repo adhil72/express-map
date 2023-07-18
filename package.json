@@ -1,5 +1,5 @@
 {
-  "name": "express-map",
+  "name": "express-mapper",
   "version": "1.0.0",
   "description": "Develop your backend faster",
   "scripts": {
@@ -23,7 +23,6 @@
     "@types/node": "^20.4.2"
   },
   "dependencies": {
-    "@types/yargs": "^17.0.24",
     "fs": "^0.0.1-security"
   }
 }

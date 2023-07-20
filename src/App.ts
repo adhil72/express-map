@@ -25,12 +25,10 @@ let name = props().name
 let exc_path = process.cwd() + '/'
 
 if (name) {
-    if (existsSync(exc_path + name)) {
-        throw new Error(`Project with name "${exc_path + name}" is already exist. pick another name`)
-    } else {
+    if (!existsSync(exc_path + name)) {
         mkdirSync(exc_path + name)
-        configProject(exc_path + name)
     }
+    configProject(exc_path + name)
 } else {
     throw new Error("You must provide name of project")
 }

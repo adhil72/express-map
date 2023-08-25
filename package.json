@@ -1,6 +1,6 @@
 {
   "name": "express-mapper",
-  "version": "1.0.1",
+  "version": "2.0.3",
   "description": "Develop your backend faster",
   "scripts": {
     "build": "tsc && echo \"express map builded\"",

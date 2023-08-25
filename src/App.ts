@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
 import props from "./Options"
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs"
-import { TypeBuildJson } from "./Types"
+import {existsSync, mkdirSync, writeFileSync} from "fs"
 import buildJson from "./data.json"
 
 const configProject = (path: string) => {
     buildJson.package.name = name
-    writeFileSync(path + '/tsconfig.json', JSON.stringify(buildJson.tsConfig))
-    writeFileSync(path + '/package.json', JSON.stringify(buildJson.package))
+    writeFileSync(path + '/tsconfig.json', JSON.stringify(buildJson.tsConfig, null, 2))
+    writeFileSync(path + '/package.json', JSON.stringify(buildJson.package, null, 2))
     mkdirSync(path + '/dist')
     mkdirSync(path + '/src')
     mkdirSync(path + '/src/routes')
@@ -22,6 +21,7 @@ const configProject = (path: string) => {
 }
 
 let name = props().name
+if (name === '.') name = ''
 let exc_path = process.cwd() + '/'
 
 if (name) {

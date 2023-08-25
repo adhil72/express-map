@@ -17,7 +17,6 @@ export default {
     import express from "express"
 import mapper from "./Helpers/Mapper"
 import {msg, success} from "./Helpers/Logger"
-import "./Helpers/Database"
 import cors from "cors"
 
 const app = express()
